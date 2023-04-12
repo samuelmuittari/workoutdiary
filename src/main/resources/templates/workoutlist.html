@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout List</title>
+</head>
+<body>
+    <h1>Workout List</h1>
+    <table>
+        <tr>
+            <th>Workout Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
+        </tr>
+        <tr th:each="workout : ${workouts}">
+            <td th:text="${workout.name}"></td>
+            <td th:text="${workout.description}"></td>
+            <td th:text="${workout.date}"></td>
+            <td th:text="${workout.time}"></td>
+            <td th:text="${workout.duration}"></td>
+            <!--Edit button-->
+            <td><a th:href="@{/edit/{workoutId}(workoutId=${workout.id})}" class="btn btn-xs btn-primary">Edit</a></td>
+            <!--Delete button-->
+            <td><a th:href="@{/delete(workoutId=${workout.id})}" class="btn btn-xs btn-danger">Delete</a></td>
+        </tr>
+    </table>
+    <a href="/add">Add Workout</a>
+</body>
