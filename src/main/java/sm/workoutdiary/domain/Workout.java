@@ -15,9 +15,9 @@ public class Workout {
     private String date;
     private String time;
     private String duration;
-
+    // Default constructor
     public Workout() {}
-
+    // Constructor
     public Workout(String name, String description, String date, String time, String duration) {
         super();
         this.name = name;

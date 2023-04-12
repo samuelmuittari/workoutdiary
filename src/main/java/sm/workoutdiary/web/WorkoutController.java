@@ -16,6 +16,11 @@ public class WorkoutController {
     @Autowired
     private WorkoutRepository workoutRepository;
     
+    @RequestMapping(value = {"/", "/login"})
+    public String login() {
+        return "login";
+    }
+
     @RequestMapping(value="/workoutlist", method = RequestMethod.GET)
     public String bookList(Model model){
         model.addAttribute("workouts", workoutRepository.findAll());
