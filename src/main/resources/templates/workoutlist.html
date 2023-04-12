@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
 <head>
     <meta charset="UTF-8">
     <title>Workout List</title>
 </head>
 <body>
     <h1>Workout List</h1>
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Workout Name</th>
             <th>Description</th>
@@ -26,5 +27,5 @@
             <td><a th:href="@{/delete(workoutId=${workout.id})}" class="btn btn-xs btn-danger">Delete</a></td>
         </tr>
     </table>
-    <a href="/add">Add Workout</a>
+    <a href="/add" class="btn btn-xs btn-success">Add Workout</a>
 </body>

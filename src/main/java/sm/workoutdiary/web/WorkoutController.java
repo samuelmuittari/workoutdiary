@@ -45,7 +45,7 @@ public class WorkoutController {
         return "redirect:workoutlist";
     }
 
-    @RequestMapping(value = "/edit/{workoutId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{workoutId}")
     public String editWorkout(@PathVariable("workoutId") Long workoutId, Model model){
         model.addAttribute("workout", workoutRepository.findById(workoutId).orElse(null));
         return "editworkout";
