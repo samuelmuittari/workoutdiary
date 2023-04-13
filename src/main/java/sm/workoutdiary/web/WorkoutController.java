@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import sm.workoutdiary.domain.Workout;
 import sm.workoutdiary.domain.WorkoutRepository;
-
+// controlleri joka hoitaa pyynnöt thymeleaf templateille
 @Controller
 public class WorkoutController {
 

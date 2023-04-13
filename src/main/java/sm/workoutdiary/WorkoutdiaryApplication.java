@@ -16,7 +16,7 @@ public class WorkoutdiaryApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WorkoutdiaryApplication.class, args);
 	}
-
+	// kun sovellus käynnistyy, tämän metodin kautta lisätään tietokantaan demodataa ja käyttäjät
 	@Bean
 	public CommandLineRunner demo(WorkoutRepository repository, UserRepository userRepository) {
 		return (args) -> {

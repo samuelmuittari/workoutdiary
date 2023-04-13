@@ -7,13 +7,14 @@
 <body>
     <h1>Edit Workout</h1>
     <form th:action="@{../save}" method="post">
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
         <input type="hidden" name="id" th:value="${workout.id}">
         <label for="name">Workout Name</label>
         <input type="text" name="name" id="name" th:value="${workout.name}">
         <label for="description">Description</label>
         <input type="text" name="description" id="description" th:value="${workout.description}">
         <label for="date">Date</label>
-        <input type="text" name="date" id="date" th:value="${workout.date}">
+        <input type="date" name="date" id="date" th:value="${workout.date}">
         <label for="time">Time</label>
         <input type="text" name="time" id="time" th:value="${workout.time}">
         <label for="duration">Duration</label>

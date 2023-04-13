@@ -10,7 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import sm.workoutdiary.web.UserDetailsImpl;
-
+// configuroidaan httpsecurity ja passwordencoder
 @Configuration
 @EnableMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig {
@@ -20,7 +20,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		
-		http.authorizeHttpRequests().requestMatchers("/css/**").permitAll()
+		http.authorizeHttpRequests().requestMatchers("/css/**", "/save").permitAll()
 		.and()
 		.authorizeHttpRequests().anyRequest().authenticated()
 		.and()
