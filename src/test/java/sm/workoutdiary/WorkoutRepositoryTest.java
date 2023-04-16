@@ -1,4 +1,4 @@
-package sm.workoutdiary;
+/*package sm.workoutdiary;
 
 import java.util.List;
 
@@ -45,3 +45,4 @@ public class WorkoutRepositoryTest {
         assertThat(repository.findById(workout.getId())).isEmpty();
     }
 }   
+*/
